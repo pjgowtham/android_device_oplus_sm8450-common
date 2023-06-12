@@ -53,8 +53,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libprocessgroup.so'),
     ('odm/lib64/mediadrm/libwvdrmengine.so', 'odm/lib64/libwvhidl.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
-    'product/app/PowerOffAlarm/PowerOffAlarm.apk': blob_fixup()
-        .apktool_patch('blob-patches/PowerOffAlarm.patch', '-s'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
     'system_ext/lib/libwfdmmsrc_system.so': blob_fixup()
@@ -72,7 +70,7 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'sm8350-common',
+    'sm8450-common',
     'oneplus',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
