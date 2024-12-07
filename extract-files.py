@@ -71,7 +71,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hidl.base@1.0.so', 'libhidlbase.so')
         .add_needed('libinput_shim.so'),
     'system_ext/lib64/libwfdservice.so': blob_fixup()
-        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V3-cpp.so'),
+        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
     'vendor/bin/hw/vendor.qti.hardware.display.composer-service': blob_fixup()
         .replace_needed('vendor.qti.hardware.display.config-V5-ndk_platform.so', 'vendor.qti.hardware.display.config-V5-ndk.so'),
     ('vendor/etc/media_cape/video_system_specs.json', 'vendor/etc/media_taro/video_system_specs.json'): blob_fixup()
